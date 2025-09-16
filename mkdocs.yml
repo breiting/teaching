@@ -36,11 +36,6 @@ theme:
 
 plugins:
   - search
-  - encryptcontent:
-      password_file: passwords.yml
-      remember_keys: true
-      webcrypto: true
-      title_prefix: "[Encrypted] "
 
 markdown_extensions:
   - admonition
