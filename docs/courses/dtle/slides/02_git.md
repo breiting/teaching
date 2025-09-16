@@ -78,6 +78,24 @@ git commit -m "My changes"
 Commit History
 ---
 
+Show all commits, starting with the newest
+
+```bash
+git log
+```
+
+Show changes over time for a specific file
+
+```bash
+git log -p <file>
+```
+
+Who changed what and when in `file`
+
+```bash
+git blame <file>
+```
+
 Branches and Tags
 ---
 
