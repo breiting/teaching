@@ -1,0 +1,54 @@
+site_name: Bernhard's Teaching Site
+site_description: Freely available teaching resources by Bernhard Reitinger
+site_url: https://teaching.reitinger.eu
+repo_url: https://github.com/breiting/teaching
+repo_name: breiting/teaching
+
+copyright: Bernhard Reitinger © 2025
+site_author: Bernhard Reitinger
+
+nav:
+  - Home: index.md
+  - Courses:
+      - DTLE:
+          - Overview: courses/dtle/index.md
+          - Block 1: courses/dtle/block_1.md
+          - Block 2: courses/dtle/block_2.md
+      - SDA:
+          - Overview: courses/sda/index.md
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.footer
+    - navigation.sections
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+    - content.action.view
+  palette:
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+
+plugins:
+  - search
+  - encryptcontent:
+      password_file: passwords.yml
+      remember_keys: true
+      webcrypto: true
+      title_prefix: "[Encrypted] "
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - pymdownx.details
+  - codehilite
