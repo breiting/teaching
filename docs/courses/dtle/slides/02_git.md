@@ -99,5 +99,17 @@ git blame <file>
 Branches and Tags
 ---
 
+List all existing branches
+
+```bash
+git branch -av
+```
+
+Switch HEAD branch
+
+```bash
+git checkout <branch>
+```
+
 Working with remotes
 ---
