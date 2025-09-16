@@ -1,9 +1,11 @@
-
-name: deploy
+name: Build & Deploy Docs
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
+    paths:
+      - "docs/**"
+      - "mkdocs.yml"
   workflow_dispatch:
 
 permissions:
@@ -13,17 +15,27 @@ jobs:
   build-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
-      - name: Install deps
+          python-version: "3.11"
+
+      - name: Install MkDocs + Material
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+
       - name: Build
         run: mkdocs build --strict
+
       - name: Deploy to GitHub Pages
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: mkdocs gh-deploy --force --message "deploy: {sha}" 
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
+          publish_branch: gh-pages
+          force_orphan: true
+          cname: teaching.reitinger.eu
