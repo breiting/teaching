@@ -29,9 +29,9 @@ This course gives you the toolbox and mindset to succeed.
 
 ## Examination
 
-Since this is an introductory course, you have two possibilities. Either you write the qualification exam at the beginning of the course, or you visit the lecture as shown below.
+Since this is an introductory course, you have two options. You can either take the qualification exam at the beginning of the course or attend the lecture as outlined below.
 
-The qualification examination consists of 30 minutes practical session, which evaluates, if you are already familiar with the content of the course.
+The qualification exam consists of a 30-minute practical session that assesses whether you are already familiar with the course content.
 
 ## Course Structure
 
