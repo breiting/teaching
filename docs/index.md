@@ -9,6 +9,10 @@ This website provides **open teaching resources** for my courses and workshops. 
 - [DTLE](courses/dtle/index.md)
 - [SDA](courses/sda/index.md)
 
+## Resources
+
+If you want to work in a Docker container with my setup installed, you can freely download it from my GitHub repository ([here](https://github.com/breiting/devbox-cpp)).
+
 ## About me
 
 - [LinkedIn](https://www.linkedin.com/in/bernhard-reitinger)
