@@ -49,6 +49,24 @@ man ls     # manual page for ls
 - Create a folder unit1
 - Inside, create a file with echo "hello" > hello.txt
 
+Other Shell Commands
+---
+
+```bash
+export     # sets an environment variable
+echo $PATH # print an environment variable
+./<cmd>    # executes an application in the current dir
+find       # find files
+grep       # search in files
+sed        # modify files
+chmod      # change file attributes
+```
+
+👉 Exercise:
+
+- Create a folder unit1
+- Inside, create a file with echo "hello" > hello.txt
+
 Viewing Files
 ---
 
