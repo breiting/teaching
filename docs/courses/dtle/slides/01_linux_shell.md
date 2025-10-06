@@ -10,149 +10,130 @@ options:
 ---
 
 
-Why Linux & the Terminal?
+AGENDA
 ---
 
+- Why Linux?
+- VirtualBox & VM login
+- Linux filesystem basics
+- The Terminal and the Shell
+- First shell commands
+- Mini exercises
+
+Why Linux?
+---
+
+<!-- incremental_lists: true -->
+
+- Linux is widely used (server, super-computer, embedded)
+- Open source, stable, flexible
+- Good development ecosystem
+- Essential for professional software workflows
 - Most engineering tools run best on Linux
 - The **shell** = your universal remote for the computer
 - Terminal = efficiency, automation, reproducibility
 - Professional developers **live in the terminal**
 - Editing, compiling, debugging → all faster
 
-Starting the VM
+VirtualBox & VM
 ---
 
-- Start **VirtualBox** → load the provided VM
-- Log in with given username & password
-- Explore:
-  - **Desktop** (graphical view)
-  - **Terminal** (command line interface)
+- Start VirtualBox VM
+- Login with provided credentials (`student`/`student`)
+- Open a terminal window
 
-👉 **Exercise**: Open a terminal window!
+Linux Filesystem Basics
+---
+
+- Hierarchy structure:
+  - `/` root
+  - `/home` user data
+  - `/etc` configuration
+  - `/usr` system applications
+
+The Terminal & The Shell
+---
+
+- Terminal: program to access the shell
+- Shell: command interpreter (`bash`, `zsh`)
+- You communicate with the OS via text commands
 
 First Shell Commands
 ---
 
 ```bash
-pwd        # where am I? (print working directory)
-ls         # list files
-cd dir/    # change directory
-mkdir lab1 # make new directory
-cp a b     # copy file
-mv a b     # move/rename
-rm file    # remove
-man ls     # manual page for ls
+pwd        # print working directory
+ls -l      # list files with details
+cd dir     # change to directory
+cd ..      # go one directory up
+mkdir test # create new directory
+rm -r test # remove directory recursively (be aware!)
 ```
 
-👉 Exercise:
-
-- Create a folder unit1
-- Inside, create a file with echo "hello" > hello.txt
-
-Other Shell Commands
+More Shell Commands
 ---
 
 ```bash
-export     # sets an environment variable
-echo $PATH # print an environment variable
-./<cmd>    # executes an application in the current dir
-find       # find files
-grep       # search in files
-sed        # modify files
-chmod      # change file attributes
+cp file1 file2   # copy file
+mv file1 file2   # move/rename file
+cat file.txt     # show file contents
+less file.txt    # view file with navigation
+head file.txt    # first lines
+tail file.txt    # last lines
+man ls           # manual for ls command
 ```
 
-👉 Exercise:
-
-- Create a folder unit1
-- Inside, create a file with echo "hello" > hello.txt
-
-Viewing Files
+Mini-Exercises
 ---
+
+# Exercise 1
+
+1. Create a directory called `myproject`
+2. Inside `myproject`, create a file `notes.txt` with:
 
 ```bash
-cat file.txt # show whole file
-more file.txt # scroll page by page
-tail file.txt # show last lines
+   echo "Hello Linux" > notes.txt
 ```
 
-👉 Exercise: Write a log file with
+3. Display its content with `cat`
 
-```
-dmesg > syslog.txt
-```
+<!-- pause -->
 
-View first and last lines of syslog.txt.
+# Exercise 2
 
-neovim as your editor
----
-
-# Overview
-
-- Neovim = modern Vim
-- Fast, keyboard-driven
-- Great for coding in C++
-
-# Core keys
-
-- i → insert mode
-- Esc → back to normal mode
-- :w → save
-- :q → quit
-
-👉 Exercise:
-
-- Open hello.txt in neovim
-- Add your name to the file
-- Save & quit
-
-VSCode
----
-
-# Overview
-
-- VSCode = full-featured IDE
-- Good for browsing, debugging, extensions
-- Terminal + Neovim = speed
-- VSCode = overview & comfort
-
-👉 Explore:
-
-- File explorer
-- Terminal inside VSCode
-- Extensions
-
-Working Like Professionals
----
-
-# Why terminal workflow?
-
-- Portable, scriptable, efficient
-- Works on servers, embedded boards, remote machines
-- Many developers use `tmux` + `vim` + `git` as daily tools
-
-Hands-On Challenge
----
-
-1. Create `project1/` directory
-2. Inside:
+1. Append more text into `notes.txt`:
 
 ```bash
-echo "int main(){return 0;}" > main.cpp
+   echo "More notes" >> notes.txt
 ```
 
-3. Open with neovim and change 0 → 42
-4. Download a file (we’ll provide in class):
+2. Use `tail` to show only the last line
+3. Delete `notes.txt` and recreate it with new content
 
-```bash
-wget https://raw.githubusercontent.com/.../sensor.cpp
-```
+Survival Package (Linux Basics)
+---
 
-5. Find line with word "temperature":
+<!-- incremental_lists: true -->
 
-```bash
-grep "temperature" sensor.cpp
-```
+- Navigation: `pwd`, `ls`, `cd`
+- File handling: `cp`, `mv`, `mkdir`, `rm`
+- Viewing: `cat`, `head`, `tail`
+- Documentation: `man`
+
+Wrap-Up
+---
+
+- Started VM and terminal
+- Learned Linux filesystem structure
+- Practiced essential shell commands
+- Hands-on exercises with files and directories
+
+Next Session
+---
+
+- Pipes and redirects
+- Essential tools: `grep`, `find`, `sed`
+- `tmux` and `neovim` basics
 
 Questions?
 ---
