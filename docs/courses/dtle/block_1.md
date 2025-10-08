@@ -1,7 +1,13 @@
-# Block 1: Environment & Tools
+# Block 1: Ablauf
 
-- Welcome & Virtual Machine ([slides](slides/00_welcome.md))
-- Linux Basics & the Terminal ([slides](slides/01_linux_shell.md))
-- VSCode - Graphical Development Environment
-- neovim - Terminal-based Development Environment
-- tmux - Terminal multiplexer
+- [ ] Moodle Anwesenheit
+- [ ] 00_welcome
+- [ ] 01_linux_shell
+  - [ ] Virtual Box Installation
+- [ ] 02_tools
+- [ ] 03_git
+  - [ ] Auf Tafel erklären was es ist
+- [ ] 04_git_advanced
+- [ ] 05_cpp_basics
+- [ ] Homework !!! VSCode
+- [ ] Go over assessment project (maybe next time)
