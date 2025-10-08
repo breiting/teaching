@@ -31,7 +31,7 @@ This course gives you the toolbox and mindset to succeed.
 
 Since this is an introductory course, you have two options. You can either take the qualification exam at the beginning of the course or attend the lecture as outlined below.
 
-The qualification exam consists of a 30-minute practical session that assesses whether you are already familiar with the course content.
+The qualification exam consists of a 60-minute practical session that assesses whether you are already familiar with the course content.
 
 ## Course Structure
 
@@ -45,11 +45,10 @@ Each unit is 45 minutes of (minimal) theory, live demos, and hands-on exercises.
 3. The Shell – Essential Commands
 4. neovim & VSCode – Your Coding Environment
 5. tmux – Work like a Pro
+6. Configuration management (Git)
 
-### Block 2: Git & C++
+### Block 2: CMake & GoogleTest & C++
 
-5. Configuration management
-6. Git
 7. CMake
 8. First C++ Project
 9. Testing
@@ -81,3 +80,4 @@ This course is not about slides — it’s about practice.
 
 - Linux Platform (Egon Teiniker) [Github](https://github.com/teiniker/teiniker-lectures-computerscience/tree/master/linux)
 - Introduction to Configuration Management (Egon Teiniker) [Github](https://github.com/teiniker/teiniker-lectures-embedded-cxx/tree/main/configuration-management)
+- Introduction to C++ (Egon Teiniker) [Github](https://github.com/teiniker/teiniker-lectures-computerscience/tree/master/programming-c%2B%2B)

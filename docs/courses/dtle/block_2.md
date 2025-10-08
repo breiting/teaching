@@ -1,8 +1,6 @@
 # Git & C++
 
-- Configuration management basics
-- Git
-- CMake
 - First C++ Project
+- CMake
 - Testing
 - Debugging

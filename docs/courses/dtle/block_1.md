@@ -1,13 +1,7 @@
-# Block 1: Ablauf
+# Block 1: Environment & Tools
 
-- [ ] Moodle Anwesenheit
-- [ ] 00_welcome
-- [ ] 01_linux_shell
-  - [ ] Virtual Box Installation
-- [ ] 02_tools
-- [ ] 03_git
-  - [ ] Auf Tafel erklären was es ist
-- [ ] 04_git_advanced
-- [ ] 05_cpp_basics
-- [ ] Homework !!! VSCode
-- [ ] Go over assessment project (maybe next time)
+- Welcome & Virtual Machine ([slides](slides/00_welcome.md))
+- Linux Basics & the Terminal ([slides](slides/01_linux_shell.md))
+- Linux Tools ([slides](slides/02_tools.md))
+- Git Basics ([slides](slides/03_git.md))
+- Git Advanced ([slides](slides/04_git_advanced.md))

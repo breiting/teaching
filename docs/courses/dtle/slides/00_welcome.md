@@ -56,6 +56,10 @@ COURSE GOALS & EXPECTED OUTCOMES
 - Edit, compile, and debug C++ projects
 - Apply to engineering domains
 
+> MY COURSE MATERIAL (Slides)
+>
+> https://teaching.reitinger.eu
+
 COURSE STYLE & LEARNING APPROACH
 ---
 
