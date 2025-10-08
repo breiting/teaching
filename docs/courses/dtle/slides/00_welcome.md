@@ -32,7 +32,9 @@ options:
 - 🌍 Explored many languages
   - Pascal, Oberon, C/C++, Java/Groovy, C#, JavaScript, Shell, Python, Go, Lua
 
-- 🎯 My mission here: → Help you get started with professional tools & workflows
+> 🎯 **My mission**
+>
+> Help you get started with professional tools & workflows
 
 <!-- column: 1 -->
 
@@ -48,9 +50,7 @@ COURSE GOALS & EXPECTED OUTCOMES
 
 <!-- incremental_lists: true -->
 
-- Understand & use essential tools
-  - Linux, Terminal, Shell, Git, C++17, CMake, Testing, Debugging
-- Build professional workflows
+- Getting started with: Linux, Terminal, Shell, Git, C++17, CMake, Testing, Debugging
 - Navigate Linux confidently
 - Manage code with Git & branches
 - Edit, compile, and debug C++ projects
@@ -63,8 +63,7 @@ COURSE STYLE & LEARNING APPROACH
 
 - Hands-on first → minimal slides, maximum coding
 - Mini-exercises
-- Direct application of new concepts
-- Project-oriented learning
+- Practice Practice Practice
 - Start small → grow into a working project
 - Collaboration & best practices
 - Use Git like a pro
@@ -84,26 +83,23 @@ COURSE GRADING
 
 # Assignment Grading Criteria
 
-- **Build & Run (1 point)**
-  - Project compiles and runs with CMake
+- **Build w/o errors (1 point)**
+  - Project compiles with CMake
 
 - **Passing unit tests (2 point)**
   - All unit tests are passing
 
 - **Quality & Documentation (1 point)**
   - Clean project structure
-  - Proper .gitignore
-  - Clear README.md with build/run instructions
 
 - **Git Workflow (1 point)**
   - Multiple meaningful commits
   - Commit messages are descriptive
 
-<!-- pause -->
+Final Grades
+---
 
-# Final Grades
-
-- **Grade 1 (Excellent): > 10 points**
+- **Grade 1 (Excellent): 10 points**
 - **Grade 2 (Good): 8 or 9 points**
 - **Grade 3 (Satisfactory): 6 or 7 points**
 - **Grade 4 (Pass): 5 points (attendance only)**
@@ -121,18 +117,9 @@ FINAL PROJECT
 
 # Why a Project?
 
-- Learn by doing
+- Learning by doing
 - Simulates a professional workflow
 - Demonstrates mastery of tools and concepts
-- Helps distinguish excellent work from minimal effort
-
-<!-- pause -->
-
-# Wrap-Up
-
-- We will start next week
-- We will build the basics together
-- Upload the package to Moodle
 
 Questions?
 ---

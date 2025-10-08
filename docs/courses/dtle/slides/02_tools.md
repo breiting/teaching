@@ -13,34 +13,64 @@ options:
 AGENDA
 ---
 
+- Installing programs
 - Streams, Pipes & Redirects
-- Essential tools: `grep`, `find`, `sed`, `ack`
+- Essential tools: `grep`, `find`, `sed`
 - `tmux` basics
 - `neovim` introduction
 - Mini exercises
+- New kids on the block: `rg`, `fd`
+
+Installing programs
+---
+
+- Requires **super-user** permissions
+- Either use `su` or `sudo`
+- Password for **super-user**: `root66`
+
+```bash
+sudo su                ... get super-user shell (student password)
+apt-get update         ... updates the package list
+apt-get install <name> ... installs a package
+```
 
 Streams in Linux
 ---
 
-- stdin (0) → input
-- stdout (1) → normal output
-- stderr (2) → error output
+> Everything is a file/stream under Linux.
+
+- stdin (0) → input (keyboard)
+- stdout (1) → normal output (terminal)
+- stderr (2) → error output (terminal)
 - Redirection:
-  ```bash
-  command > file   # stdout to file (overwrite)
-  command >> file  # append stdout to file
-  command < file   # use file as input
-  ```
+
+```bash
+command > file   # stdout to file (overwrite)
+command >> file  # append stdout to file
+command < file   # use file as input
+```
+
+Default: `ls` prints the directory listing to `stdout` by default!
 
 Pipes
 ---
+
+Streams can be forwarded to other programs. `stdout` gets `stdin` for the other
 
 - Combine commands using `|`
 
 ```bash
 ls -l | grep ".cpp"
 ps aux | grep firefox
-dmesg | less
+```
+
+Mini-Exercises
+---
+
+```bash
+cat                ... without arguments (what happens?)
+cat > test.txt     ... use Control-D
+ls /notfound > out.txt 2> err.txt
 ```
 
 Tool: grep
@@ -70,15 +100,6 @@ Tool: sed
 
 ```bash
 sed 's/foo/bar/g' file.txt
-```
-
-Tool: ack (if installed)
----
-
-- Like grep, but optimized for source code
-
-```bash
-ack "main"
 ```
 
 Mini-Exercises
@@ -130,13 +151,37 @@ Mini-Exercises
 3. In the left pane, open a file with `nvim`
 4. In the right pane, run `ls -l` and `grep`
 
+Other Shell Commands
+---
+
+```bash
+export     # sets an environment variable
+echo $PATH # print an environment variable
+./<cmd>    # executes an application in the current dir
+chmod      # change file attributes
+```
+
+# New kids on the block
+
+## `ripgrep`
+
+ripgrep recursively searches directories for a regex pattern while respecting your gitignore. A fast replacement for `grep`.
+
+`apt-get install ripgrep`
+
+## `fdfind`
+
+A simple, fast and user-friendly alternative to `find`
+
+`apt-get install fd-find`
+
 Survival Package (Tools & Workflow)
 ---
 
 - Pipes and redirection: `|`, `>`, `>>`
-- grep, `find`, `sed`, `ack`
-- tmux: sessions, splits, detach/attach
-- neovim: insert, save, quit, navigation, search, undo
+- `grep` or `ripgrep`, `find` or `fdfind`, `sed`
+- `tmux`: sessions, splits, detach/attach
+- `neovim`: insert, save, quit, navigation, search, undo
 
 # Wrap-Up
 
@@ -147,63 +192,7 @@ Survival Package (Tools & Workflow)
 
 # Next Session
 
-- Git basics: init, add, commit
+- Configuration management
+- Git basics: `init`, `add`, `commit`
 - Connecting to remotes
 - Push & pull
-
-Other Shell Commands
----
-
-```bash
-export     # sets an environment variable
-echo $PATH # print an environment variable
-./<cmd>    # executes an application in the current dir
-find       # find files
-grep       # search in files
-sed        # modify files
-chmod      # change file attributes
-```
-
-👉 Exercise:
-
-- Create a folder unit1
-- Inside, create a file with echo "hello" > hello.txt
-
-Viewing Files
----
-
-```bash
-cat file.txt # show whole file
-more file.txt # scroll page by page
-tail file.txt # show last lines
-```
-
-👉 Exercise: Write a log file with
-
-```
-dmesg > syslog.txt
-```
-
-View first and last lines of syslog.txt.
-
-neovim as your editor
----
-
-# Overview
-
-- Neovim = modern Vim
-- Fast, keyboard-driven
-- Great for coding in C++
-
-# Core keys
-
-- i → insert mode
-- Esc → back to normal mode
-- :w → save
-- :q → quit
-
-👉 Exercise:
-
-- Open hello.txt in neovim
-- Add your name to the file
-- Save & quit

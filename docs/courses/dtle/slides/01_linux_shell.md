@@ -30,8 +30,8 @@ Why Linux?
 - Good development ecosystem
 - Essential for professional software workflows
 - Most engineering tools run best on Linux
-- The **shell** = your universal remote for the computer
-- Terminal = efficiency, automation, reproducibility
+- The **Shell** = your universal remote for the computer
+- The **Terminal** = efficiency, automation, reproducibility
 - Professional developers **live in the terminal**
 - Editing, compiling, debugging → all faster
 
@@ -55,7 +55,7 @@ The Terminal & The Shell
 ---
 
 - Terminal: program to access the shell
-- Shell: command interpreter (`bash`, `zsh`)
+- Shell: command interpreter (`bash`, `zsh`, ...)
 - You communicate with the OS via text commands
 
 First Shell Commands
@@ -133,6 +133,7 @@ Next Session
 
 - Pipes and redirects
 - Essential tools: `grep`, `find`, `sed`
+- New kids on the block: `rg`, `fd`
 - `tmux` and `neovim` basics
 
 Questions?
