@@ -50,7 +50,8 @@ Merging
 git merge feature
 ```
 
-# Merge Conflicts
+Merge Conflicts
+---
 
 - Happen when two branches modify the same line
 - Git marks conflicts in files:
@@ -106,7 +107,7 @@ Mini-Exercises
 2. Add and commit a new file
 3. Switch back to `main` and merge `experiment`
 
-# Mini-Exercise 2 (Merge)
+# Exercise 2 (Merge)
 
 1. Make a new branch `b1`
 2. Commit change
@@ -116,7 +117,7 @@ Mini-Exercises
 6. Merge `b2`
 7. Commit
 
-# Mini-Exercise 3
+# Exercise 3
 
 1. Run `git blame` on a file with multiple commits
 2. Identify who changed each line
@@ -124,9 +125,12 @@ Mini-Exercises
 Survival Package (Git Advanced)
 ---
 
-- `git branch, git switch -c, git merge`
+- `git branch`
+- `git switch`
+- `git merge`
 - Conflict resolution markers `<<<<<<<`, `=======`, `>>>>>>>`
-- `git stash, git stash pop`
+- `git stash`
+- `git stash pop`
 - `git log --oneline --graph`
 - `git blame`
 

@@ -190,9 +190,11 @@ Survival Package (Tools & Workflow)
 - Worked with tmux splits
 - Got comfortable editing in neovim
 
+# Resources
+
+[](https://github.com/teiniker/teiniker-lectures-computerscience/tree/master/linux)
+
 # Next Session
 
 - Configuration management
-- Git basics: `init`, `add`, `commit`
-- Connecting to remotes
-- Push & pull
+- Git basics

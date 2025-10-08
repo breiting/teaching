@@ -23,11 +23,18 @@ AGENDA
 What is Git?
 ---
 
+<!-- column_layout: [2, 1] -->
+<!-- column: 0 -->
+
 - A distributed version control system (VCS)
 - Tracks changes in files (mostly source code)
 - Allows collaboration, history, and backups
 - Invented by Linus Torvalds in 2005 for Linux kernel
 - The name? British slang for "unpleasant person" – Linus being ironic
+
+<!-- column: 1 -->
+
+![image:width:90%](torvalds.jpg)
 
 Why Git?
 ---
@@ -41,14 +48,26 @@ Why Git?
 Git Concepts
 ---
 
+<!-- incremental_lists: true -->
+
 - **Repository (repo)**: project folder + .git directory
 - **Commit**: snapshot of changes
 - **Branch**: parallel line of development
 - **Remote**: server version (GitHub, GitLab)
 - **Clone**: copy remote repo locally
 
+Prerequisites
+---
+
+```bash
+git config --global user.name "Charlie Smith"
+git config --global user.email "charlie.smith@powerplant.com"
+```
+
 Create a New Repo
 ---
+
+Make sure to have a new empty folder (directory).
 
 ```bash
 git init
@@ -127,10 +146,17 @@ git clone https://github.com/breiting/devbox-cpp
 Survival Package (Git Basics)
 ---
 
-- `git init, git status, git add, git commit -m`
-- `git log, git diff`
-- `git remote add origin, git push, git pull, git clone`
-- `.gitignore`
+- `git init`
+- `git status`
+- `git add`
+- `git commit -m`
+- `git log`
+- `git diff`
+- `git remote add origin`
+- `git push`
+- `git pull`
+- `git clone`
+- Don't forget to add a `.gitignore` file
 
 Wrap-Up
 ---
@@ -139,6 +165,10 @@ Wrap-Up
 - Created first local repo
 - Connected to a remote repo
 - Practiced committing and pushing
+
+# Resources
+
+[](https://github.com/teiniker/teiniker-lectures-computerscience/tree/master/configuration-management/versioning)
 
 Next Session
 ---

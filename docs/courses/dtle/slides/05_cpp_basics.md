@@ -99,7 +99,7 @@ make
 myproject/
 ├── src/
 │   └── main.cpp
-├── include/
+├── inc/
 ├── CMakeLists.txt
 └── build/
 ```
@@ -130,7 +130,7 @@ Survival Package (C++ Project Setup)
 - `g++ main.cpp -o main`
 - Makefile: `make`, `make clean`
 - CMake: `cmake .. && make`
-- Project structure: `src/`, `include/`, `build/`
+- Project structure: `src/`, `inc/`, `build/`
 
 Wrap-Up
 ---
@@ -139,6 +139,10 @@ Wrap-Up
 - Learned Makefile basics
 - Used CMake to build project
 - Understood standard project structure
+
+# Resources
+
+[](https://github.com/teiniker/teiniker-lectures-computerscience/tree/master/programming-c%2B%2B)
 
 Next Session
 ---
