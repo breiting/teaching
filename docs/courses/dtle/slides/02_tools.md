@@ -121,6 +121,7 @@ tmux Basics
 
 - Terminal multiplexer
 - Keep sessions running in background
+- `tmux detach`
 - Key bindings (default prefix: `Ctrl-b`):
   - `%` split vertically
   - `"` split horizontally
@@ -192,7 +193,7 @@ Survival Package (Tools & Workflow)
 
 # Resources
 
-[](https://github.com/teiniker/teiniker-lectures-computerscience/tree/master/linux)
+[Teiniker Github](https://github.com/teiniker/teiniker-lectures-computerscience/tree/master/linux)
 
 # Next Session
 

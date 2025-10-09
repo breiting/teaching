@@ -168,7 +168,7 @@ Wrap-Up
 
 # Resources
 
-[](https://github.com/teiniker/teiniker-lectures-computerscience/tree/master/configuration-management/versioning)
+[Teiniker Github](https://github.com/teiniker/teiniker-lectures-computerscience/tree/master/configuration-management/versioning)
 
 Next Session
 ---

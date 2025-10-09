@@ -1,5 +1,5 @@
 ---
-title: Design Tools And Laboratory Engineering - Coding 
+title: Design Tools And Laboratory Engineering - Linux and C++
 sub_title: Course Number M24.0862104, WS 2025/26 
 author: Bernhard Reitinger
 theme:
