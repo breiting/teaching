@@ -147,4 +147,4 @@ Wrap-Up
 Next Session
 ---
 
-- Start with your assessment project
+- Testing your software with Google Test
