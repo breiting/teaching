@@ -16,7 +16,7 @@ AGENDA
 - Introduction to the STL
 - std::vector
 - std::map
-- std::set / std::unordered_map
+- std::set
 - Practical examples and exercises
 
 Why the STL?
@@ -76,8 +76,7 @@ v.pop_back();     // remove last
 std::map
 ---
 
-- Associates **keys** with **values**
-- Sorted by keys automatically
+- Associates **keys** with **values**, sorted by keys automatically
 
 ```cpp
 #include <map>
@@ -106,8 +105,7 @@ Clara: 91
 std::set
 ---
 
-- Stores unique elements only
-- Automatically sorted
+- Stores unique elements only, automatically sorted
 
 ```cpp
 #include <set>
@@ -152,6 +150,9 @@ int main() {
 }
 ```
 
+Example: Word Counter
+---
+
 # Expected Output
 
 ```
@@ -177,4 +178,3 @@ Wrap-Up
 - Learned STL basics
 - Practiced vectors, maps, and sets
 - Built a simple word counter
-- Prepared foundation for next unit (Classes & OOP)

@@ -1,0 +1,109 @@
+% Unit 5: First C++ Project
+% Master Course: Linux, Git & C++
+% Instructor: [Your Name]
+
+# Agenda
+- Introduction to C++17
+- First program: Hello World
+- Compile with g++
+- Intro to Makefile
+- Intro to CMake
+- Project structure
+- Mini exercises
+
+# Why C++?
+- Widely used in embedded, power electronics, and system testing
+- High performance and control
+- Large ecosystem (STL, libraries)
+- Industry standard for engineering projects
+
+# Hello World in C++
+```cpp
+#include <iostream>
+int main() {
+    std::cout << "Hello, world!" << std::endl;
+    return 0;
+}
+```
+
+# Compile and Run
+```bash
+g++ main.cpp -o main
+./main
+```
+
+# Makefile (Intro)
+- Automate compilation
+Example `Makefile`:
+```
+all:
+	g++ main.cpp -o main
+clean:
+	rm -f main
+```
+- Run:
+```bash
+make
+make clean
+```
+
+# CMake Basics
+- Cross-platform build system generator
+- Easier for larger projects
+
+Minimal `CMakeLists.txt`:
+```
+cmake_minimum_required(VERSION 3.10)
+project(HelloWorld)
+add_executable(main main.cpp)
+```
+
+# Building with CMake
+```bash
+mkdir build
+cd build
+cmake ..
+make
+./main
+```
+
+# Project Structure
+```
+myproject/
+├── src/
+│   └── main.cpp
+├── include/
+├── CMakeLists.txt
+└── build/
+```
+
+# Mini-Exercise 1
+1. Create a new folder `cpp_project`
+2. Write `main.cpp` with Hello World
+3. Compile with `g++` and run
+
+# Mini-Exercise 2
+1. Write a Makefile to compile `main.cpp`
+2. Use `make` to build and `make clean` to remove binaries
+
+# Mini-Exercise 3
+1. Create `CMakeLists.txt` as shown
+2. Build with CMake in `build/`
+3. Run the program
+
+# Survival Package (C++ Project Setup)
+- `g++ main.cpp -o main`
+- Makefile: `make`, `make clean`
+- CMake: `cmake .. && make`
+- Project structure: `src/`, `include/`, `build/`
+
+# Wrap-Up
+- Wrote and compiled first C++ program
+- Learned Makefile basics
+- Used CMake to build project
+- Understood standard project structure
+
+# Next Session
+- C++ data types and STL
+- Strings, vectors, maps, sets
+- More coding practice

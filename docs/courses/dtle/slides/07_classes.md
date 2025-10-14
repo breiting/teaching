@@ -35,10 +35,10 @@ A class defines **data (attributes)** and **functions (methods)**.
 ```cpp
 class Sensor {
 public:
-    void SetValue(double v) { value = v; }
-    double GetValue() const { return value; }
+    void SetValue(double v) { m_Value = v; }
+    double GetValue() const { return m_Value; }
 private:
-    double value;
+    double m_Value;
 };
 ```
 
@@ -60,13 +60,13 @@ Constructors
 ```cpp
 class Sensor {
 public:
-    Sensor(string n, double v = 0.0) : name(n), value(v) {}
-    void setValue(double v) { value = v; }
-    double getValue() const { return value; }
-    string getName() const { return name; }
+    Sensor(std::string n, double v = 0.0) : m_Name(n), m_Value(v) {}
+    void SetValue(double v) { m_Value = v; }
+    double GetValue() const { return m_Value; }
+    string GetName() const { return m_Name; }
 private:
-    string name;
-    double value;
+    string m_Name;
+    double m_Value;
 };
 ```
 
@@ -74,6 +74,7 @@ Example: Sensor Class in Action
 ---
 
 `src/main.cpp`
+
 ```cpp
 #include <iostream>
 #include <vector>
@@ -87,34 +88,35 @@ int main() {
         Sensor("Current")
     };
 
-    sensors[0].setValue(24.3);
-    sensors[1].setValue(3.3);
-    sensors[2].setValue(1.2);
+    sensors[0].SetValue(24.3);
+    sensors[1].SetValue(3.3);
+    sensors[2].SetValue(1.2);
 
     cout << "=== Sensor Readings ===" << endl;
     for (const auto& s : sensors)
-        cout << s.getName() << ": " << s.getValue() << endl;
+        cout << s.GetName() << ": " << s.GetValue() << endl;
 }
 ```
 
 Example: Sensor Class in Action
 ---
 
-# sensor.h
+# sensor.hpp
+
 ```cpp
 #pragma once
 #include <string>
 using namespace std;
 
 class Sensor {
-private:
-    string name;
-    double value;
 public:
     Sensor(string n, double v = 0.0);
-    void setValue(double v);
-    double getValue() const;
-    string getName() const;
+    void SetValue(double v);
+    double GetValue() const;
+    std::string GetName() const;
+private:
+    string m_Name;
+    double m_Value;
 };
 ```
 
@@ -122,30 +124,41 @@ Example: Sensor Class in Action
 ---
 
 # sensor.cpp
+
 ```cpp
 #include "sensor.h"
 
-Sensor::Sensor(string n, double v) : name(n), value(v) {}
-void Sensor::setValue(double v) { value = v; }
-double Sensor::getValue() const { return value; }
-string Sensor::getName() const { return name; }
+Sensor::Sensor(string n, double v) : m_Name(n), m_Value(v) {}
+
+void Sensor::SetValue(double v) { m_Value = v; }
+
+double Sensor::GetValue() const { return m_Value; }
+
+std::string Sensor::GetName() const { return m_Name; }
 ```
 
+Example: Sensor Class in Action
+---
+
 # const Correctness
+
 - Mark methods that don't modify data as `const`
 - Example:
+
 ```cpp
-double getValue() const { return value; }
+double GetValue() const { return m_Value; }
 ```
+
 - Prevents accidental modification of internal state.
 
 # Add Derived Behavior
 Extend class with computed values or conditions.
+
 ```cpp
 class Sensor {
     ...
-    bool isAbove(double threshold) const {
-        return value > threshold;
+    bool IsAbove(double threshold) const {
+        return m_Value > threshold;
     }
 };
 ```
@@ -156,8 +169,8 @@ Example Extension
 ```cpp
 cout << "High Temperature Sensors:" << endl;
 for (const auto& s : sensors) {
-    if (s.isAbove(20.0))
-        cout << s.getName() << " = " << s.getValue() << endl;
+    if (s.IsAbove(20.0))
+        cout << s.GetName() << " = " << s.GetValue() << endl;
 }
 ```
 
@@ -167,13 +180,12 @@ Survival Package (OOP)
 - `class`, `private`, `public`
 - `constructor`, `getter`, `setter`
 - `const` for read-only methods
-- Separate interface (`.h`) and implementation (`.cpp`)
-- Organize with `src/` and `include/`
+- Separate interface (`.hpp`) and implementation (`.cpp`)
+- Organize with `src/` and `inc/`
 
 Wrap-Up
 ---
 
 - Learned fundamentals of classes in C++
 - Built a reusable `Sensor` class
-- Practiced encapsulation and const correctness
-- Prepared for next unit: Debugging and error tracing
+- Practiced encapsulation and `const` correctness

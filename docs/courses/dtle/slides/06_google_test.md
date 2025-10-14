@@ -46,16 +46,46 @@ Test Driven Development (TDD)
   - Keeps code modular and testable
   - Encourages clean interfaces
 
+
 Example: Simple Math Library (1/4)
 ---
 
-# Step 1: Write the test first
+# Step 1: CMake Project
+
+`CMakeLists.txt`
+
+```
+cmake_minimum_required(VERSION 3.10)
+project(mathlib)
+
+# Produce json file for code completion (optional)
+set (CMAKE_EXPORT_COMPILE_COMMANDS 1)
+
+# Enable testing
+enable_testing()
+add_subdirectory(gtest)
+
+# Library
+add_library(mathlib src/mathlib.cpp)
+target_include_directories(mathlib PUBLIC inc)
+
+add_executable(runTests tests/test_math.cpp)
+target_link_libraries(runTests mathlib gtest_main)
+
+add_test(NAME runTests COMMAND runTests)
+```
+
+
+Example: Simple Math Library (2/4)
+---
+
+# Step 2: Write the test first (expectation)
 
 `tests/test_math.cpp`
 
 ```cpp
 #include <gtest/gtest.h>
-#include "mathlib.h"
+#include "mathlib.hpp"
 
 TEST(MathTest, Addition) {
     EXPECT_EQ(add(2, 3), 5);
@@ -66,12 +96,12 @@ TEST(MathTest, Subtraction) {
 }
 ```
 
-Example: Simple Math Library (2/4)
+Example: Simple Math Library (3/4)
 ---
 
-# Step 2: Implement the Library
+# Step 3: Implement the Library
 
-`include/mathlib.h`
+`inc/mathlib.hpp`
 
 ```cpp
 #pragma once
@@ -83,7 +113,7 @@ int subtract(int a, int b);
 `src/mathlib.cpp`
 
 ```cpp
-#include "mathlib.h"
+#include "mathlib.hpp"
 
 int add(int a, int b) {
     return a + b;
@@ -92,30 +122,6 @@ int add(int a, int b) {
 int subtract(int a, int b) {
     return a - b;
 }
-```
-
-Example: Simple Math Library (3/4)
----
-
-# Step 3: CMake Integration
-
-`CMakeLists.txt`
-
-```
-cmake_minimum_required(VERSION 3.10)
-project(MathLibTest)
-
-enable_testing()
-
-include_directories(${GTEST_INCLUDE_DIRS} include)
-
-add_library(mathlib src/mathlib.cpp)
-
-add_executable(runTests tests/test_math.cpp)
-
-target_link_libraries(runTests mathlib GTest::GTest GTest::Main)
-
-add_test(NAME runTests COMMAND runTests)
 ```
 
 Example: Simple Math Library (4/4)
@@ -153,7 +159,6 @@ Mini-Exercise
 2. Run tests (should fail).
 3. Implement `multiply` in `mathlib.cpp`.
 4. Run again until all tests pass.
-5. Commit and push your changes.
 
 Survival Package (Testing)
 ---
@@ -174,7 +179,7 @@ Wrap-Up
 Next Session
 ---
 
-- STL
 - Classes
+- STL
 - Start with your assignment
 
