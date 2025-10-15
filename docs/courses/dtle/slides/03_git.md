@@ -133,7 +133,7 @@ Mini-Exercises
 1. Clone an existing repository from Github
 
 ```bash
-git clone https://github.com/breiting/devbox-cpp
+git clone https://github.com/breiting/dtle-2025
 ```
 
 # Exercise 3 (requires a Github account)
