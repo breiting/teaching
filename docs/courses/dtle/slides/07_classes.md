@@ -9,6 +9,7 @@ options:
   command_prefix: "cmd:"
 ---
 
+
 AGENDA
 ---
 
@@ -60,12 +61,12 @@ Constructors
 ```cpp
 class Sensor {
 public:
-    Sensor(std::string n, double v = 0.0) : m_Name(n), m_Value(v) {}
+    Sensor(const std::string& n, double v = 0.0) : m_Name(n), m_Value(v) {}
     void SetValue(double v) { m_Value = v; }
     double GetValue() const { return m_Value; }
     string GetName() const { return m_Name; }
 private:
-    string m_Name;
+    std::string m_Name;
     double m_Value;
 };
 ```
@@ -152,6 +153,7 @@ double GetValue() const { return m_Value; }
 - Prevents accidental modification of internal state.
 
 # Add Derived Behavior
+
 Extend class with computed values or conditions.
 
 ```cpp
