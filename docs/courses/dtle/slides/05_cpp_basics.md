@@ -142,7 +142,7 @@ Wrap-Up
 
 # Resources
 
-[](https://github.com/teiniker/teiniker-lectures-computerscience/tree/master/programming-c%2B%2B)
+[Slides](https://github.com/teiniker/teiniker-lectures-computerscience/tree/master/programming-c%2B%2B)
 
 Next Session
 ---
