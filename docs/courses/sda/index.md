@@ -2,6 +2,8 @@
 
 _FH Joanneum Course WS 2025/26_
 
+This page contains important information about _Software Design and Architecture_.
+
 ## Resources
 
 - Linux Platform (Egon Teiniker) [Github](https://github.com/teiniker/teiniker-lectures-computerscience/tree/master/linux)
