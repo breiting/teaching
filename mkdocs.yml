@@ -14,6 +14,9 @@ nav:
           - Block 2: courses/dtle/block_2.md
       - SDA:
           - Overview: courses/sda/index.md
+          - Welcome: courses/sda/unit1/00_welcome.md
+          - Slides: courses/sda/unit1/01_slides.md
+          - Lab Project: courses/sda/unit1/02_circuitsim.md
 
 theme:
   name: material
